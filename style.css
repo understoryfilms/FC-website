@@ -1,0 +1,254 @@
+/* --- Base Styles & Reset --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    background-color: #FDFBF6; /* Light Off-White/Beige Background */
+    color: #111111; /* Dark Text */
+    /* --- BODY FONT - MAKE SURE NAME IS CORRECT --- */
+    font-family: "obviously", 'Helvetica Neue', Helvetica, Arial, sans-serif; /* <-- IMPORTANT: Replace "obviously" if needed */
+    line-height: 1.6;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* --- Font Setup --- */
+/* Font loading is handled by the <link rel="stylesheet" href="https://use.typekit.net/qir3wjf.css"> tag in your HTML <head> */
+
+/* --- Layout Container --- */
+.container {
+    max-width: 1200px; /* Adjust max-width as needed */
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px; /* Padding on the sides */
+    width: 100%;
+}
+
+/* --- Sections --- */
+.section {
+    padding: 60px 0;
+    text-align: center; /* Center content within sections by default */
+}
+
+/* --- UPDATED: Hero Section Styling --- */
+.section-hero {
+    position: relative; /* Needed for potential overlays */
+    z-index: 1;         /* Base stacking context */
+
+    /* --- ADDED/UPDATED Background Image --- */
+    /* --- V V V REPLACE 'path/to/your/hero-image.jpg' WITH YOUR ACTUAL IMAGE PATH V V V --- */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('https://github.com/understoryfilms/FC-website/blob/1bcb773bce84a5e6e568974f1277ac57a90d871b/Poster-mobile-titles.jpg'); /* Dark overlay + Image */
+    /* --- ^ ^ ^ REPLACE 'path/to/your/hero-image.jpg' WITH YOUR ACTUAL IMAGE PATH ^ ^ ^ --- */
+    background-size: cover; /* Cover the entire section */
+    background-position: center center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+
+    /* --- ADDED/UPDATED Text Color for Hero --- */
+    color: #ffffff; /* Make default text white inside hero */
+
+    min-height: 80vh; /* Ensure section has height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px; /* Adjust padding as needed */
+    text-align: center;
+}
+
+/* --- ADDED: Specific overrides for hero text elements --- */
+.section-hero h1,
+.section-hero h2,
+.section-hero p {
+    color: #ffffff; /* Ensure headings and paragraphs are white */
+}
+
+/* --- Typography --- */
+
+/* --- UPDATED: Specific H1 Font Rule --- */
+h1 {
+    /* --- V V V REPLACE "NEW_H1_FONT_NAME" with the ACTUAL font name from Adobe Fonts V V V --- */
+    font-family: "gelica", "obviously", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    /* --- ^ ^ ^ REPLACE "NEW_H1_FONT_NAME" with the ACTUAL font name from Adobe Fonts ^ ^ ^ --- */
+    font-size: 3rem;
+    /* font-weight: 700; */ /* Adjust weight if needed for the new font */
+}
+
+/* General Heading Rule (Uses default heading font) */
+h2, h3, h4, h5, h6 {
+    /* --- HEADING FONT - MAKE SURE NAME IS CORRECT --- */
+    font-family: "obviously", 'Helvetica Neue', Helvetica, Arial, sans-serif; /* Default heading font */
+    font-weight: 900; /* Adjust weight as needed */
+    margin-bottom: 1rem;
+    line-height: 1.2;
+    color: #111111; /* Default dark heading color */
+    text-transform: uppercase;
+}
+
+/* --- ADDED: Ensure H1 in hero uses specific font AND is white --- */
+.section-hero h1 {
+     /* --- V V V REPLACE "NEW_H1_FONT_NAME" with the ACTUAL font name from Adobe Fonts V V V --- */
+     font-family: "gelica", "obviously", 'Helvetica Neue', Helvetica, Arial, sans-serif;
+     /* --- ^ ^ ^ REPLACE "NEW_H1_FONT_NAME" with the ACTUAL font name from Adobe Fonts ^ ^ ^ --- */
+     color: #ffffff; /* Ensure it's white in the hero */
+}
+
+
+p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #111111; /* Default dark paragraphs */
+}
+
+/* --- UPDATED: Link Styles & Hover Color --- */
+a {
+    color: #111111; /* Dark links by default */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover, a:focus {
+    color: #888888; /* UPDATED - Light gray on hover */
+    text-decoration: none;
+}
+
+/* --- Buttons --- */
+.button {
+    display: inline-block;
+    background-color: #111111; /* Dark Background */
+    color: #FDFBF6; /* Light Text */
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    /* --- BUTTON FONT - MAKE SURE NAME IS CORRECT --- */
+    font-family: "obviously", 'Helvetica Neue', Helvetica, Arial, sans-serif; /* <-- IMPORTANT: Replace "obviously" if needed */
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 10px 5px;
+    letter-spacing: 0.5px;
+}
+
+.button:hover, .button:focus {
+    background-color: #333333; /* Slightly lighter dark shade on hover */
+    color: #FDFBF6;
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+/* --- Header / Navigation --- */
+.site-header {
+    padding: 30px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.site-header .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.site-header nav li {
+    display: inline-block;
+}
+
+/* --- UPDATED: Ensure nav links stay dark by default & use new hover --- */
+.site-header nav a {
+    color: #111111; /* Keep nav links dark (contrast with hero bg) */
+    text-decoration: none;
+    margin-left: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.site-header nav a:hover,
+.site-header nav a:focus {
+    color: #888888; /* UPDATED - Light gray on hover for nav links too */
+    text-decoration: none;
+}
+
+
+/* --- Images --- */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* --- Footer --- */
+.site-footer {
+    background-color: #ECEBE5;
+    color: #555555;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 60px;
+}
+
+.site-footer p {
+    margin-bottom: 0.5rem;
+    color: #555555;
+}
+
+.site-footer a {
+    color: #111111;
+}
+
+/* Footer link hover uses the general 'a:hover' rule */
+
+
+/* --- Responsive Design --- */
+
+/* Tablets and smaller */
+@media (max-width: 768px) {
+    html { font-size: 15px; }
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 2rem; }
+    .section { padding: 40px 0; }
+    .site-header nav ul { gap: 20px; flex-wrap: wrap; }
+    .site-header nav a { font-size: 0.8rem; }
+    .section-hero { min-height: 70vh; } /* Adjust hero height */
+
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+    html { font-size: 14px; }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.8rem; }
+    .container { padding: 0 15px; }
+    p { font-size: 0.95rem; }
+    .button { padding: 10px 20px; font-size: 0.85rem; }
+    .site-header nav ul { gap: 15px; }
+    .site-header nav a { font-size: 0.75rem; }
+    .section-hero { min-height: 60vh; padding: 60px 15px; } /* Adjust hero height/padding */
+}
