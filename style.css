@@ -45,7 +45,7 @@ body {
 
     /* --- ADDED/UPDATED Background Image --- */
     /* --- V V V REPLACE 'path/to/your/hero-image.jpg' WITH YOUR ACTUAL IMAGE PATH V V V --- */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/poster-mobile-titles.jpg'); /* Dark overlay + Image */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/Poster-mobile-titles.jpg'); /* Dark overlay + Image */
     /* --- ^ ^ ^ REPLACE 'path/to/your/hero-image.jpg' WITH YOUR ACTUAL IMAGE PATH ^ ^ ^ --- */
     background-size: cover; /* Cover the entire section */
     background-position: center center; /* Center the image */
