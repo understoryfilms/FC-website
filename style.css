@@ -65,6 +65,7 @@ body {
     text-align: center;
 }
 
+
 /* --- ADDED: Specific overrides for hero text elements --- */
 .section-hero h1,
 .section-hero h2,
@@ -102,6 +103,13 @@ h2, h3, h4, h5, h6 {
      color: #ffffff; /* Ensure it's white in the hero */
 }
 
+.section-about {
+    background-image: url('images/Poster-mobile-poster-comp.jpeg'); /* Dark overlay + Image */
+    /* --- ^ ^ ^ REPLACE 'path/to/your/hero-image.jpg' WITH YOUR ACTUAL IMAGE PATH ^ ^ ^ --- */
+    background-size: cover; /* Cover the entire section */
+    background-position: center center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+}
 
 p {
     margin-bottom: 1.5rem;
